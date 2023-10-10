@@ -1,5 +1,12 @@
 # SalesAppFront
 
+| Característica   | Detalle                                      |
+|------------------|----------------------------------------------|
+| 🛠 Framework      | Angular 16                                   |
+| 💻 Lenguaje       | TypeScript                                   |
+| 🧩 Elementos      | Componentes y Pipes                          |
+| 🔍 Uso Específico | Filtrado de Tablas                           |
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Development server
