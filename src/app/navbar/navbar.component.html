@@ -1,0 +1,64 @@
+<nav>
+  <div class="navBar">
+    <div class="toggle_button">
+      <button (click)="toggle($event)" class="ofbutton">
+        <i
+          class="fa-solid"
+          [ngClass]="{ 'fa-bars': !isHovered, 'fa-arrow-right': isHovered }"
+          (mouseover)="onMouseOver()"
+          (mouseout)="onMouseOut()"
+        ></i>
+      </button>
+    </div>
+    <div class="nav_tittle">
+      <a routerLink="/" (click)="close()"><img src="../../assets/img/data/logo.png" alt=""></a>
+    </div>
+    <div class="login_content">
+      <a class="button_login" routerLink="/login" (click)="close()">Login</a>
+    </div>
+  </div>
+  <!--off-canvas-->
+  <div [class.open]="isOpen" class="off-canvas">
+    <div class="close_section">
+      <button (click)="close()" class="close-button">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
+    <div class="content">
+      <div class="off-home">
+        <a routerLink="/" (click)="close()"
+          ><i class="fa-solid fa-house"></i
+        ></a>
+      </div>
+      <ul>
+        <li>
+          <a routerLink="/registro-de-ventas" (click)="close()"
+            >Registro De Ventas</a
+          >
+        </li>
+        <li>
+          <a routerLink="/perfil-usuario" (click)="close()"
+            >Perfil de Usuario</a
+          >
+        </li>
+        <li><a href="#">Progreso Mensual E Historia</a></li>
+        <li><a href="#">Registrar Cliente</a></li>
+      </ul>
+      <!--zona de administradores-->
+      <div class="zone_administrator">
+        <div class="title-administrator">
+          <h3>Zona de administrador</h3>
+        </div>
+        <ul>
+          <li><a href="#">Clientes</a></li>
+          <li><a href="#">Administrar Ventas</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Empleados</a></li>
+          <li><a href="#">Usuarios</a></li>
+        </ul>
+      </div>
+      <!--fin zona de administradores-->
+    </div>
+  </div>
+  <!--off-canvas-->
+</nav>

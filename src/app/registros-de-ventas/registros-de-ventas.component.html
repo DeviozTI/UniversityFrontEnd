@@ -1,0 +1,75 @@
+<div class="container-ventas">
+  <div class="ventas">
+    <div class="tittle-ventas">
+      <h3>Registro de Ventas</h3>
+    </div>
+    <div class="form-ventas">
+      <form action="">
+        <div class="item-input">
+          <label for="">Buscar cliente por nombre</label>
+          <input type="text" />
+        </div>
+        <div class="item-input">
+          <label for="">Buscar cliente por Codigo</label>
+          <input type="text" />
+        </div>
+        <div class="item-input">
+          <label for="">Buscar Producto por Nombre</label>
+          <input type="text" />
+        </div>
+        <div class="item-input">
+          <label for="">Buscar Producto por Codigo</label>
+          <input type="text" />
+        </div>
+        <div class="item-input">
+          <label for="">Cantidad</label>
+          <input type="text" />
+        </div>
+        <div class="item-input">
+          <label for="">Fecha</label>
+          <input type="date" />
+        </div>
+        <div class="button-ventas">
+          <button>Agregar Producto</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="table-ventas">
+    <!-- Campo de búsqueda -->
+    <input [(ngModel)]="searchText" placeholder="Buscar..." style="float: right; margin-bottom: 20px;" />
+  
+    <!-- Botones de paginación -->
+    <div class="pagination">
+      <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
+      <span>Página {{ currentPage }} de {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
+    </div>
+  
+    <!-- Tabla de datos -->
+    <table>
+      <thead>
+        <!-- Encabezados de la tabla -->
+        <tr>
+          <th>Producto</th>
+          <th>Status</th>
+          <th>Pagos</th>
+          <th>Monto</th>
+          <!-- ... otras columnas -->
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filas de datos -->
+        <tr *ngFor="let item of paginatedData | filterDataTable : searchText">
+          <td>{{ item.producto }}</td>
+          <td>{{ item.status }}</td>
+          <td>{{ item.monto_pago }}</td>
+          <td>{{ item.monto }}</td>
+          <!-- ... otras celdas -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

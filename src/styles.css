@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    --font-family: "Poppins", sans-serif;
+    --color-background-primary: #F4F2FF;
+    --color-background-button: #3563e9;;
+}

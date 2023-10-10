@@ -1,0 +1,181 @@
+.container-ventas{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.container-ventas .ventas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-family);
+    width: 100%;
+}
+
+.container-ventas .ventas  .tittle-ventas{
+    margin-bottom: 1.5rem;
+}
+
+.container-ventas .ventas .form-ventas{
+    background: var(--color-background-primary);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 18rem;
+}
+
+.container-ventas .ventas .form-ventas form .item-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-ventas .ventas .form-ventas form .item-input input{
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    outline: none;
+}
+
+.container-ventas .ventas .form-ventas form .item-input label{
+    font-size: 0.9rem;
+}
+
+.container-ventas .ventas .form-ventas form .button-ventas{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.container-ventas .ventas .form-ventas form .button-ventas button{
+    border: none;
+    background: var(--color-background-button);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+/* styles.css o data-table.component.css */
+
+.table-ventas {
+    background-color: #F4F2FF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-family: var(--font-family);
+    width: 70%;
+    margin-top: 1.5rem;
+}
+
+.table-ventas input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    order: 2;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.table-ventas .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    order: 3;
+}
+
+.table-ventas table {
+    width: 100%;
+    border-collapse: collapse;
+    order: 1;
+}
+
+.table-ventas th, .table-ventas td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-ventas th {
+    background-color: #e0e0e0;
+}
+
+.table-ventas tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.table-ventas tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+    .table-ventas input {
+        order: 1;
+        float: right;
+        margin-bottom: 0;
+    }
+    .table-ventas .pagination, .table-ventas table {
+        order: 2;
+    }
+    .table-ventas .pagination {
+        flex-direction: row;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .pagination button {
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .pagination span {
+    margin: 0 10px;
+  }
+
+/* zona de midia querys */
+
+@media (min-width: 700px) {
+    .container-ventas .ventas .form-ventas{
+        width: 70%;
+    }
+
+    .container-ventas .ventas .form-ventas form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .container-ventas .ventas .form-ventas form .button-ventas{
+        grid-column: 1/3;
+        grid-row: 4/5;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content:flex-end;
+    }
+}
